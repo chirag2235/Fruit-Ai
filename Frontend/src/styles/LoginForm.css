@@ -1,0 +1,81 @@
+.login-container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab-container > span {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .active-tab {
+    color: blue;
+    border-bottom: 2px solid blue;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-container input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding-left: 10px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .forgot-password {
+    color: blue;
+    font-size: 12px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-button:hover {
+    background-color: darkblue;
+  }
+  
+  .social-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .social-container a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #000;
+  }
+  
