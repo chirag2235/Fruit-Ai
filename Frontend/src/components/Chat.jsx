@@ -30,8 +30,7 @@ function ChatPage() {
     try {
       // Fetch response from API
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyDOJOzl5k6Jx7f3WQpXF7QZpVSlkkQA_Ag",
-        method: "post",
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key==${process.env.REACT_APP_GOOGLE_TRANSLATE_API_KEY}`,
         data: {
           contents: [{ parts: [{ text: input }] }],
         },
