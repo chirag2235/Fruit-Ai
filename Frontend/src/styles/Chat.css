@@ -1,0 +1,174 @@
+/* General styles for the chat page container */
+.chat-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Light theme */
+  .chat-page-container.light {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+  }
+  
+  /* Dark theme */
+  .chat-page-container.dark {
+    background-color: #2c2c2c; /* Dark grey background */
+    color: #ffffff; /* White text */
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: inherit; /* Inherit background color from container */
+    color: inherit; /* Inherit text color from container */
+    position: absolute; /* Positioning header at the top */
+    top: 0; /* Align at the top of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+  
+  /* Header h1 and p styles */
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .header p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .theme-toggle-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Chat container styles */
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Shrink width for better alignment */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 60px; /* Space for the header */
+  }
+  
+  /* Message list styles */
+  .message-list {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Message styles */
+  .message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 90%; /* Ensure messages don't span the entire width */
+    word-wrap: break-word; /* Handle long words */
+  }
+  
+  /* User message styles */
+  .message.user {
+    background-color: #ffecd2; /* Light peach */
+    color: #000;
+    align-self: flex-end;
+  }
+  
+  /* API message styles */
+  .message.api {
+    background-color: #fcb69f; /* Light coral */
+    color: #000;
+    align-self: flex-start;
+  }
+  
+  /* Input container styles */
+  .input-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  /* Input field styles */
+  .input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Button styles */
+  .input-container button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .input-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .input-container button:disabled {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px 5px; /* Adjust padding for smaller screens */
+    }
+  
+    .chat-container {
+      max-width: 100%; /* Full width for mobile screens */
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .message-list {
+      max-height: 300px; /* Adjust max height for smaller screens */
+    }
+  
+    .input-container {
+      flex-direction: column; /* Stack input and button on top of each other */
+    }
+  
+    .input-container button {
+      width: 100%; /* Full width button */
+      margin-top: 10px;
+    }
+  }
+  
