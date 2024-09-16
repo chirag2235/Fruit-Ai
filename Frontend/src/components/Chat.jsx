@@ -8,7 +8,7 @@ function ChatPage() {
   const [generatingAnswer, setGeneratingAnswer] = useState(false);
   const [date, setDate] = useState("");
   const [theme, setTheme] = useState("light"); // Added theme state
-
+  const apiUrl = import.meta.env.VITE_API_KEY;
   useEffect(() => {
     // Set current date
     const today = new Date().toLocaleDateString();
@@ -30,7 +30,8 @@ function ChatPage() {
     try {
       // Fetch response from API
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key==${process.env.REACT_APP_GOOGLE_TRANSLATE_API_KEY}`,
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiUrl}`,
+        method: "post",
         data: {
           contents: [{ parts: [{ text: input }] }],
         },

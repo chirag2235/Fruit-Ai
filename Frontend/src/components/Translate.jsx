@@ -7,7 +7,7 @@ function Translator() {
   const [translatedText, setTranslatedText] = useState("");
   const [generatingAnswer, setGeneratingAnswer] = useState(false);
   const [targetLanguage, setTargetLanguage] = useState("en"); // Default to English
-
+  const apiUrl = import.meta.env.VITE_API_KEY;
   // Full list of languages with their codes
   const languages = [
     { code: "af", name: "Afrikaans" },
@@ -98,10 +98,10 @@ function Translator() {
 
     try {
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyDOJOzl5k6Jx7f3WQpXF7QZpVSlkkQA_Ag",
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiUrl}`,
         method: "post",
         data: {
-          contents: [{ parts: [{ text: `${text} convert in ${targetLanguage}` }] }],
+          contents: [{ parts: [{ text: `${text} , how to write in ${targetLanguage} , just provide the text` }] }],
         },
       });
 
